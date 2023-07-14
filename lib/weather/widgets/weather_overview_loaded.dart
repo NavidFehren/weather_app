@@ -23,12 +23,17 @@ class WeatherOverviewLoaded extends StatelessWidget {
           WeatherCardHeader(city: city).padding(bottom: 40),
           Image.asset(
             weatherData.weatherImagePath,
+            height: 180,
           ).padding(left: 32, right: 32, bottom: 24),
           Text(
             "${weatherData.currentWeather?.temperature?.toStringAsFixed(1)} °C",
             style: Theme.of(context).textTheme.displayMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
+          ).padding(bottom: 8),
+          Text(
+            weatherData.weatherCodeDescription,
+            style: Theme.of(context).textTheme.labelLarge,
           ),
         ],
       ).paddingAll(16),

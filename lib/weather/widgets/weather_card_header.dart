@@ -24,11 +24,13 @@ class WeatherCardHeader extends StatelessWidget {
           size: 32,
           color: AppColors.darkGreen.value,
         ).padding(right: 8),
-        Text(
-          city.name,
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+        Expanded(
+          child: Text(
+            city.name,
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
         ),
         const Spacer(),
         Container(
