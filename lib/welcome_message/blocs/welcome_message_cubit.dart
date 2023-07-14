@@ -23,6 +23,6 @@ class WelcomeMessageCubit extends Cubit<WelcomeMessageState> {
       suffix = "Evening";
     }
 
-    return "Good\n$suffix!";
+    return "Good $suffix!";
   }
 }

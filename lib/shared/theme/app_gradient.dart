@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/shared/theme/app_colors.dart';
 
 enum AppGradient {
-  blue;
+  green;
 
   LinearGradient get value {
     switch (this) {
-      case AppGradient.blue:
+      case AppGradient.green:
         return LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.lightBlue.value,
-            AppColors.lightYellow.value,
+            AppColors.darkGreen.value,
+            AppColors.lightGreen.value,
           ],
         );
     }

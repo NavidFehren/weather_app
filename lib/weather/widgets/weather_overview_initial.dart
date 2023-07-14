@@ -17,11 +17,15 @@ class WeatherOverviewInitial extends StatelessWidget {
       children: [
         Text(
           'Please Select a Location',
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ).padding(bottom: 16),
         ElevatedButton(
           onPressed: () => _onSelectLocationTapped(context),
-          child: Text("Select Location"),
+          child: Text(
+            "Select Location",
+          ),
         ),
       ],
     );

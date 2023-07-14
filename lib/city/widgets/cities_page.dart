@@ -15,7 +15,9 @@ class CitiesPage extends StatelessWidget {
       children: [
         Text(
           "Choose a city",
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ).padding(bottom: 16),
         Expanded(
           child: BlocProvider(

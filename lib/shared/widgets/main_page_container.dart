@@ -30,7 +30,7 @@ class MainPageContainer extends StatelessWidget {
           child: Container(
             alignment: headerAlignment,
             decoration: BoxDecoration(
-              gradient: AppGradient.blue.value,
+              gradient: AppGradient.green.value,
             ),
             child: header?.padding(
               top: safeAreaHeight + 16,

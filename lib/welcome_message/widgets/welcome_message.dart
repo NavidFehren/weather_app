@@ -13,7 +13,7 @@ class WelcomeMessage extends StatelessWidget {
         builder: (context, state) {
           return Text(
             state.dayTimeText,
-            style: Theme.of(context).textTheme.displayMedium?.copyWith(
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
                   fontWeight: FontWeight.w700,
                 ),
           );
