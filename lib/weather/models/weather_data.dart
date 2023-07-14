@@ -1,3 +1,5 @@
+import 'package:weather_app/gen/assets.gen.dart';
+
 /// latitude : 48.56
 /// longitude : 8.619999
 /// generationtime_ms : 0.9109973907470703
@@ -39,12 +41,12 @@ class WeatherData {
     switch (currentWeather?.weathercode) {
       // 0	Clear sky
       case 0:
-        return 'assets/images/weather/sun.png';
+        return Assets.images.weather.sun.path;
       // 1, 2, 3	Mainly clear, partly cloudy, and overcast
       case 1:
       case 2:
       case 3:
-        return 'assets/images/weather/cloudy.png';
+        return Assets.images.weather.cloudy.path;
       // 51, 53, 55	Drizzle: Light, moderate, and dense intensity
       // 61, 63, 65	Rain: Slight, moderate and heavy intensity
       // 80, 81, 82	Rain showers: Slight, moderate, and violent
@@ -57,16 +59,16 @@ class WeatherData {
       case 81:
       case 82:
       case 83:
-        return 'assets/images/weather/rain.png';
+        return Assets.images.weather.rain.path;
       // 71, 73, 75	Snow fall: Slight, moderate, and heavy intensity
       // 77	Snow grains
       case 71:
       case 73:
       case 75:
       case 77:
-        return 'assets/images/weather/snow.png';
+        return Assets.images.weather.snow.path;
       default:
-        return 'assets/images/weather/unknown.jpg';
+        return Assets.images.weather.unknown.path;
     }
   }
 
