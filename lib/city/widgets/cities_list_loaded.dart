@@ -30,6 +30,7 @@ class CitiesListLoaded extends StatelessWidget {
           child: ListView.separated(
             shrinkWrap: true,
             itemCount: cities.length,
+            padding: EdgeInsets.zero,
             separatorBuilder: (context, index) => const SizedBox(height: 12),
             itemBuilder: (context, index) {
               final city = cities[index];

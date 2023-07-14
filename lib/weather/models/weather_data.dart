@@ -37,7 +37,6 @@ class WeatherData {
   });
 
   String get weatherImagePath {
-    print(currentWeather?.weathercode);
     switch (currentWeather?.weathercode) {
       // 0	Clear sky
       case 0:

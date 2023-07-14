@@ -3,6 +3,7 @@ import 'package:weather_app/app/app_bloc_provider.dart';
 import 'package:weather_app/app/app_repository_provider.dart';
 import 'package:weather_app/app/app_service_provider.dart';
 import 'package:weather_app/home/widgets/home_screen.dart';
+import 'package:weather_app/shared/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,30 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blueGrey,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-        ),
-        searchBarTheme: SearchBarThemeData(
-          backgroundColor: MaterialStateProperty.all(Colors.blueGrey),
-          textStyle: MaterialStateProperty.all(
-            const TextStyle(color: Colors.white),
-          ),
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(24),
-            ),
-          ),
-        ),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.themeData,
       home: AppServiceProvider(
         child: AppRepositoryProvider(
           child: const AppBlocProvider(
